@@ -1,7 +1,8 @@
 <html>
 
 <head>
-    <meta charset="windows-1252" />
+    <link rel="manifest" href="./app.webmanifest">
+    <meta name="theme-color" content="#0b0f19" charset="windows-1252" />
     <title>PC Building Simulator - HTML Calculator v1.15.3 Build 1 - 3DMark Scores, Builds, Upgrades</title>
     <style>
         body {
@@ -582,6 +583,15 @@
         }
     </style>
 </head>
+
+<script>
+    if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+            navigator.serviceWorker.register("./service-worker.js");
+        });
+    }
+</script>
+
 
 <body id="v1">
     <div id="divNavigationBar">
